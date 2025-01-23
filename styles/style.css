@@ -11,6 +11,270 @@
 */
 
 .page {
+  font-family: var(--font), sans-serif;
+  background-image: var(--background);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wdth" var(--font-width);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border: solid 2px #000;
+  background-color: #fff;
+  inline-size: var(--width-content);
+}
+
+.header {
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-right: clamp(0.875rem, -1.4577rem + 9.9531vw, 7.5rem);
+  padding-bottom: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-left: clamp(0.875rem, -1.4577rem + 9.9531vw, 7.5rem);
+  font-family: var(--font-accent), sans-serif;
+}
+
+.logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.card__img-start {
+  filter: sepia(75%);
+}
+
+.card__img-first {
+  filter: hue-rotate(45deg);
+}
+
+.card__img-new {
+  filter: invert(0.9);
+}
+
+.card__img-care {
+  filter: contrast(1000%);
+}
+
+.card__img-rest {
+  filter: saturate(500%);
+}
+
+.card__img-list {
+  filter: grayscale(100%);
+}
+
+.card__img-deadline {
+  filter: brightness(500%) contrast(50%);
+}
+
+.card__title {
+  align-self: start;
+  margin: 5px 10px;
+  font-size: 18px;
+}
+
+.card__image {
+  position: relative;
+  isolation: isolate;
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--font-accent), sans-serif;
+  text-transform: uppercase;
+  text-shadow: -1px 0 var(--stroke-color), 0 1px var(--stroke-color),
+    1px 0 var(--stroke-color), 0 -1px var(--stroke-color);
+}
+
+@supports (text-stroke: 1px var(--stroke-color)) {
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
+  }
+}
+
+.card__img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  mix-blend-mode: hard-light;
+  aspect-ratio: 1/1;
+}
+
+.card__description {
+  margin: 25px 25px 0 25px;
+  font-size: 18px;
+}
+
+.dialog {
+  border-width: 1px;
+  padding: 30px;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  max-inline-size: 353px;
+  min-block-size: 191px;
+}
+
+.modal__description {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.modal__text {
+  line-height: 1.5;
+  white-space: break-spaces;
+}
+
+.dialog::backdrop {
+  backdrop-filter: brightness(25%);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 54px;
+  margin-bottom: 99px;
+}
+
+.floppy {
+  width: 21px;
+  height: 21px;
+}
+
+.modal__floppy {
+  width: 40px;
+  height: 40px;
+}
+
+/* кнопки */
+.card__buttons {
+  display: flex;
+  align-self: end;
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+.button {
+  position: relative;
+  border: none;
+  outline: solid 2px #000;
+  font-family: var(--font-accent), Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  font-size: 14px;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 0;
+  height: 100%;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover::after {
+  width: 100%;
+  background-color: #000;
+  transition: width 1s, background-color 0.5s ease-in-out;
+}
+
+.button__text,
+.floppy {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.card__like-button {
+  padding: 0 37px;
+}
+
+.card__icon-button {
+  outline: none;
+}
+
+.card__icon-button:hover::after {
+  width: 0;
+}
+
+.save:focus,
+.card__like-button:focus {
+  box-shadow: 2px 2px 0 #000;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: solid 2px #000;
+  transition: outline 0.3s ease;
+}
+
+.save {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 21px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.modal__button {
+  padding: 12px 132px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+@media (width <= 375px) {
+  .container {
+    width: 100%;
+  }
+
+  .save {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .floppy {
+    width: 28px;
+    height: 28px;
+  }
 }
