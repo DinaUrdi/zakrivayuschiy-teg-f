@@ -17,11 +17,16 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--font-weight, 400);
 }
 
 @supports (font-variation-settings: normal) {
   .page {
-    font-variation-settings: "wght" var(--font-width, 400);
+    font-variation-settings: 'wght' var(--font-weight, 400);
+  }
+
+  .card__title {
+    font-variation-settings: 'wght' var(--font-weight-accent, 700);
   }
 }
 
@@ -96,6 +101,7 @@
   align-self: start;
   margin: 5px 10px;
   font-size: 18px;
+  font-variation-settings: 'wght' var(--font-weight-accent, 700);
 }
 
 .card__image {

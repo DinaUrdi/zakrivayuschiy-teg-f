@@ -2,8 +2,8 @@
 :root {
     --font: 'Inter-Variable', sans-serif;
     --font-accent: 'PressStart2P-Regular', sans-serif;
-    --font-width: 400;
-    --font-width-accent: 700;
+    --font-weight: 400;
+    --font-weight-accent: 700;
     --width-content: clamp(23.438rem, 16.2859rem + 30.5157vw, 43.75rem);
     --background:
         repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
