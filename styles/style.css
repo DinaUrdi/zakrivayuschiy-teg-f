@@ -17,7 +17,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wdth" var(--font-width);
+  font-variation-settings: "wdth" var(--font-width, 400);
 }
 
 .container {
