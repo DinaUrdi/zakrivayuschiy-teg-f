@@ -18,6 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--font-weight, 400);
+  background-color: #d3d3d3;
 }
 
 @supports (font-variation-settings: normal) {
