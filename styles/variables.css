@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --font: 'Inter-Variable', sans-serif;
-    --font-accent: 'PressStart2P-Regular', sans-serif;
+    --font-accent: 'PressStart2P', sans-serif;
     --font-weight: 400;
     --font-weight-accent: 700;
     --width-content: clamp(23.438rem, 16.2859rem + 30.5157vw, 43.75rem);

@@ -70,33 +70,6 @@
   gap: 52px;
 }
 
-.card__img-start {
-  filter: sepia(75%);
-}
-
-.card__img-first {
-  filter: hue-rotate(45deg);
-}
-
-.card__img-new {
-  filter: invert(0.9);
-}
-
-.card__img-care {
-  filter: contrast(1000%);
-}
-
-.card__img-rest {
-  filter: saturate(500%);
-}
-
-.card__img-list {
-  filter: grayscale(100%);
-}
-
-.card__img-deadline {
-  filter: brightness(500%) contrast(50%);
-}
 
 .card__title {
   align-self: start;
@@ -107,11 +80,23 @@
 
 .card__image {
   position: relative;
-  isolation: isolate;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
 }
 
 .card__label {
   position: absolute;
+  isolation: isolate;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+  color: #000;
+  opacity: 50%;
   top: 25px;
   right: 25px;
   font-family: var(--font-accent), sans-serif;
@@ -120,7 +105,7 @@
     1px 0 var(--stroke-color), 0 -1px var(--stroke-color);
 }
 
-@supports (text-stroke: 1px var(--stroke-color)) {
+@supports (text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color)) {
   .card__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--stroke-color);
@@ -128,16 +113,40 @@
   }
 }
 
-.card__img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  mix-blend-mode: hard-light;
-  aspect-ratio: 1/1;
+
+.filter-sepia {
+  filter: sepia(75%);
+}
+
+.filter-hue {
+  filter: hue-rotate(45deg);
+}
+
+.filter-invert {
+  filter: invert(0.9);
+}
+
+.filter-contrast {
+  filter: contrast(1000%);
+}
+
+.filter-saturate {
+  filter: saturate(500%);
+}
+
+.filter-grayscale {
+  filter: grayscale(100%);
+}
+
+.filter-brightness-contrast {
+  filter: brightness(500%) contrast(50%);
 }
 
 .card__description {
-  margin: 25px 25px 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin: 27px 25px 0 25px;
   font-size: 18px;
 }
 
@@ -164,13 +173,13 @@
 }
 
 .dialog::backdrop {
-  backdrop-filter: brightness(25%);
+  background-color: #000;
+  opacity: 75%;
 }
 
 .modal {
   display: flex;
   justify-content: center;
-  margin-top: 54px;
   margin-bottom: 99px;
 }
 
@@ -180,8 +189,9 @@
 }
 
 .modal__floppy {
-  width: 40px;
-  height: 40px;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
 }
 
 /* кнопки */
@@ -195,68 +205,63 @@
 
 .button {
   position: relative;
-  border: none;
-  outline: solid 2px #000;
+  border: solid 2px #000;
   font-family: var(--font-accent), Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
   font-size: 14px;
   background-color: transparent;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  overflow: hidden;
 }
 
-.button::after {
+.button:focus, 
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 0;
-  height: 100%;
-  background-color: transparent;
-  transition: 0.5s ease-in-out;
+  background-color: #000;
+  inset: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
 }
 
-.button:hover::after {
-  width: 100%;
-  background-color: #000;
-  transition: width 1s, background-color 0.5s ease-in-out;
+.button:hover::before {
+  transform: translatex(0);
 }
 
 .button__text,
 .floppy {
-  position: relative;
-  z-index: 1;
   color: #fff;
   mix-blend-mode: difference;
 }
 
 .card__like-button {
-  padding: 0 37px;
+  width: 127px;
 }
 
 .card__icon-button {
+  
+  border: solid 2px transparent;
   outline: none;
+  transition: outline 0.3s linear;
 }
 
-.card__icon-button:hover::after {
-  width: 0;
-}
-
-.save:focus,
-.card__like-button:focus {
-  box-shadow: 2px 2px 0 #000;
-  outline: none;
-  transition: box-shadow 0.3s ease;
-}
-
-.card__icon-button:focus {
-  outline: none;
+.card__icon-button:focus-visible, .card__icon-button:focus {
+  box-shadow: none;
 }
 
 .card__icon-button:focus-visible {
-  outline: solid 2px #000;
-  transition: outline 0.3s ease;
+  border: solid 2px #000;
+}
+
+.card__icon-button::before {
+  background-color: transparent;
 }
 
 .save {
@@ -264,15 +269,12 @@
   align-items: center;
   gap: 5px;
   padding: 15px 21px;
-  font-family: var(--font-accent);
-  font-size: 14px;
   background-color: #fff;
 }
 
 .modal__button {
   padding: 12px 132px;
   text-transform: uppercase;
-  background-color: transparent;
 }
 
 @media (width <= 375px) {
@@ -280,8 +282,11 @@
     width: 100%;
   }
 
+  .card__label {
+    text-transform: lowercase;
+  }
+
   .save {
-    display: flex;
     flex-direction: column;
   }
 

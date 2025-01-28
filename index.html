@@ -19,12 +19,12 @@
       <h2 class="title">закрывающий тег</h2>
     </header>
     <main class="main">
-      <section class="card container">
+      <article class="card container">
         <h2 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
         <div class="card__image">
-          <span class="card__label">Поехали</span>
+          <span class="card__label" aria-hidden="true">Поехали</span>
 
           <img
             src="./images/image.png" loading="lazy"
@@ -32,15 +32,17 @@
             class="card__img"
           />
         </div>
-        <p class="card__description">
-          Это было самое начало пути. На этом этапе важно было проникнуться
-          основами и настроиться на учёбу. И, возможно, подумать, как новые
-          знания могут повлиять на ваше будущее.
-        </p>
-        <p class="card__description">Хотелось скорее погрузиться в процесс.</p>
+        <div class="card__description">
+          <p>
+            Это было самое начало пути. На этом этапе важно было проникнуться
+            основами и настроиться на учёбу. И, возможно, подумать, как новые
+            знания могут повлиять на ваше будущее.
+          </p>
+          <p>Хотелось скорее погрузиться в процесс.</p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -73,36 +75,38 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
-      <section class="card container">
+      </article>
+      <article class="card container">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__image">
-          <span class="card__label">старт</span>
+          <span class="card__label" aria-hidden="true">старт</span>
 
           <img
             src="./images/image.png" loading="lazy"
             alt="дом на колесах"
-            class="card__img card__img-start"
+            class="card__img filter-sepia"
           />
         </div>
-        <p class="card__description">
-          На первых этапах мы работали со страхами и сомнениями, которые часто
-          испытывают новички. Один из них — страх перед чистым листом. Это,
-          конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим
-          ощущением скрываются более глубокие вопросы: с чего начать? а вдруг
-          будет слишком сложно? что, если я не справлюсь?
-        </p>
-        <p class="card__description">
-          Все показалось простым, задачи решались быстро, новая информация легко
-          усваивалась.
-        </p>
+        <div class="card__description">
+          <p>
+            На первых этапах мы работали со страхами и сомнениями, которые часто
+            испытывают новички. Один из них — страх перед чистым листом. Это,
+            конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим
+            ощущением скрываются более глубокие вопросы: с чего начать? а вдруг
+            будет слишком сложно? что, если я не справлюсь?
+          </p>
+          <p>
+            Все показалось простым, задачи решались быстро, новая информация легко
+            усваивалась.
+          </p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -135,34 +139,36 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
-      <section class="card container">
+      </article>
+      <article class="card container">
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__image">
-          <span class="card__label">первый проект</span>
+          <span class="card__label" aria-hidden="true">первый проект</span>
 
           <img
             src="./images/image.png" loading="lazy"
             alt="дом на колесах"
-            class="card__img card__img-first"
+            class="card__img filter-hue"
           />
         </div>
-        <p class="card__description">
-          Первый проект — позади! Но это всё ещё самое начало пути. Радость
-          могла быстро померкнуть и смениться ожиданием провала. Или вы,
-          наоборот, могли вдохновиться успехами и поверить в себя.
-        </p>
-        <p class="card__description">
-          Сдача первого проекта прошла волнительно, но быстро и с легкостью.
-          Казалось, что я всё смогу.
-        </p>
+        <div class="card__description">
+          <p>
+            Первый проект — позади! Но это всё ещё самое начало пути. Радость
+            могла быстро померкнуть и смениться ожиданием провала. Или вы,
+            наоборот, могли вдохновиться успехами и поверить в себя.
+          </p>
+          <p>
+            Сдача первого проекта прошла волнительно, но быстро и с легкостью.
+            Казалось, что я всё смогу.
+          </p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -195,36 +201,38 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
-      <section class="card container">
+      </article>
+      <article class="card container">
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__image">
-          <span class="card__label">новое</span>
+          <span class="card__label" aria-hidden="true">новое</span>
 
           <img
             src="./images/image.png" loading="lazy"
             alt="дом на колесах"
-            class="card__img card__img-new"
+            class="card__img filter-invert"
           />
         </div>
-        <p class="card__description">
-          На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы
-          понять, как много ещё впереди. Вы могли попытаться погнаться за
-          идеалом и понять, что он недостижим. А, может, вы вовсе и не
-          подвержены перфекционизму и вместо того, чтобы сделать идеально,
-          старались просто сделать.
-        </p>
-        <p class="card__description">
-          Новой информации стало в разы больше, а уверенности в своих силах -
-          нет.
-        </p>
+        <div class="card__description">
+          <p>
+            На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы
+            понять, как много ещё впереди. Вы могли попытаться погнаться за
+            идеалом и понять, что он недостижим. А, может, вы вовсе и не
+            подвержены перфекционизму и вместо того, чтобы сделать идеально,
+            старались просто сделать.
+          </p>
+          <p>
+            Новой информации стало в разы больше, а уверенности в своих силах -
+            нет.
+          </p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -257,37 +265,39 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
-      <section class="card container">
+      </article>
+      <article class="card container">
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__image">
-          <span class="card__label">забота</span>
+          <span class="card__label" aria-hidden="true">забота</span>
 
           <img
             src="./images/image.png" loading="lazy"
             alt="дом на колесах"
-            class="card__img card__img-care"
+            class="card__img filter-contrast"
           />
         </div>
-        <p class="card__description">
-          Всё это время вы были не одиноки (хотя, возможно, иногда и
-          чувствовали, что одни против целого мира). Вас окружали одногруппники,
-          команда сопровождения и просто близкие люди, которым можно
-          пожаловаться, если очередной макет просто так не поддавался. Осваивать
-          что-то новое легче, когда рядом есть единомышленники, не правда ли?
-        </p>
-        <p class="card__description">
-          Так и есть, в моменты непонимания происходящего рядом всегда были
-          одногруппники и команда. На любой вопрос или беспокойство найдется
-          ответ и поддержка.
-        </p>
+        <div class="card__description">
+          <p>
+            Всё это время вы были не одиноки (хотя, возможно, иногда и
+            чувствовали, что одни против целого мира). Вас окружали одногруппники,
+            команда сопровождения и просто близкие люди, которым можно
+            пожаловаться, если очередной макет просто так не поддавался. Осваивать
+            что-то новое легче, когда рядом есть единомышленники, не правда ли?
+          </p>
+          <p>
+            Так и есть, в моменты непонимания происходящего рядом всегда были
+            одногруппники и команда. На любой вопрос или беспокойство найдется
+            ответ и поддержка.
+          </p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -320,34 +330,36 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
-      <section class="card container">
+      </article>
+      <article class="card container">
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__image">
-          <span class="card__label">отдых</span>
+          <span class="card__label" aria-hidden="true">отдых</span>
 
           <img
             src="./images/image.png" loading="lazy"
             alt="дом на колесах"
-            class="card__img card__img-rest"
+            class="card__img filter-saturate"
           />
         </div>
-        <p class="card__description">
-          На этом курсе вы постоянно решали разные задачи. В какой-то момент вам
-          могло показаться, что решения просто иссякли. Значит, пришло время
-          посмотреть на задачу под другим углом.
-        </p>
-        <p class="card__description">
-          Всегда помогало отвлечься: поспать, прогуляться или пообедать - и
-          решение само приходило в голову.
-        </p>
+        <div class="card__description">
+          <p>
+            На этом курсе вы постоянно решали разные задачи. В какой-то момент вам
+            могло показаться, что решения просто иссякли. Значит, пришло время
+            посмотреть на задачу под другим углом.
+          </p>
+          <p>
+            Всегда помогало отвлечься: поспать, прогуляться или пообедать - и
+            решение само приходило в голову.
+          </p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -380,37 +392,39 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
-      <section class="card container">
+      </article>
+      <article class="card container">
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__image">
-          <span class="card__label">to-do list</span>
+          <span class="card__label" aria-hidden="true">to-do list</span>
 
           <img
             src="./images/image.png" loading="lazy"
             alt="дом на колесах"
-            class="card__img card__img-list"
+            class="card__img filter-grayscale"
           />
         </div>
-        <p class="card__description">
-          Во время учёбы часто возникает чувство, когда не знаешь, за что
-          хвататься. Вроде и проектную пора сдавать, и задачи хочется порешать,
-          и в теории получше разобраться, и жизнь не забыть пожить. В такие
-          моменты очень нужна концентрация. Вспомните, откуда вы её черпали.
-        </p>
-        <p class="card__description">
-          Облегчает жизнь грамотно составленный планер. Четко поставленные
-          долгосрочные цели и список ежедневных задач не только сфокусируют на
-          важном, но и датут возможность регулярно находить свободное время для
-          себя.
-        </p>
+        <div class="card__description">
+          <p>
+            Во время учёбы часто возникает чувство, когда не знаешь, за что
+            хвататься. Вроде и проектную пора сдавать, и задачи хочется порешать,
+            и в теории получше разобраться, и жизнь не забыть пожить. В такие
+            моменты очень нужна концентрация. Вспомните, откуда вы её черпали.
+          </p>
+          <p>
+            Облегчает жизнь грамотно составленный планер. Четко поставленные
+            долгосрочные цели и список ежедневных задач не только сфокусируют на
+            важном, но и датут возможность регулярно находить свободное время для
+            себя.
+          </p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -443,38 +457,40 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
-      <section class="card container">
+      </article>
+      <article class="card container">
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__image">
-          <span class="card__label">дедлайн горит</span>
+          <span class="card__label" aria-hidden="true">дедлайн горит</span>
 
           <img
             src="./images/image.png" loading="lazy"
             alt="дом на колесах"
-            class="card__img card__img-deadline"
+            class="card__img filter-brightness-contrast"
           />
         </div>
-        <p class="card__description">
-          Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
-          Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с
-          окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И
-          этот мир постоянно меняется. Познать его полностью не получится, но
-          это тот случай, когда важен сам процесс познания. Ведь часто путь — и
-          есть результат.
-        </p>
-        <p class="card__description">
-          Рефлексировать о прошлом гораздо приятнее, чем осознавать настоящее.
-          Сейчас я здесь, и здесь пожар, паника и слезы. Пройдет время и я с
-          удовольствием и гордостью буду вспоминать эти дни.
-        </p>
+        <div class="card__description">
+          <p>
+            Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
+            Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с
+            окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И
+            этот мир постоянно меняется. Познать его полностью не получится, но
+            это тот случай, когда важен сам процесс познания. Ведь часто путь — и
+            есть результат.
+          </p>
+          <p>
+            Рефлексировать о прошлом гораздо приятнее, чем осознавать настоящее.
+            Сейчас я здесь, и здесь пожар, паника и слезы. Пройдет время и я с
+            удовольствием и гордостью буду вспоминать эти дни.
+          </p>
+        </div>
 
         <div class="card__buttons">
-          <button class="button card__icon-button">
+          <button type="button" class="button card__icon-button">
             <svg
               class="like-icon"
               width="39"
@@ -507,21 +523,21 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
-      </section>
+      </article>
       <div class="modal">
         <dialog class="dialog" id="dialog">
-          <form>
+          <form method="dialog">
             <div class="modal__description">
               <svg viewBox="0 0 40 40" class="modal__floppy">
                 <use href="./svg/floppyModal.svg#floppy"></use>
               </svg>
               <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
             </div>
-            <button class="button modal__button">
+            <button type="submit" class="button modal__button">
               <span class="button__text">ок</span>
             </button>
           </form>
