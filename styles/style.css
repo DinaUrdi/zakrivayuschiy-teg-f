@@ -96,6 +96,7 @@
   opacity: 50%;
   color: #000;
   font-family: var(--font-accent), sans-serif;
+  font-size: 14px;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--stroke-color), 0 1px var(--stroke-color),
     1px 0 var(--stroke-color), 0 -1px var(--stroke-color);
@@ -149,12 +150,12 @@
 }
 
 .dialog {
-  border-width: 1px;
+  border-width: 2px;
   padding: 30px;
   font-family: var(--font-accent), sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  max-inline-size: 353px;
+  max-inline-size: 357px;
   min-block-size: 191px;
 }
 
@@ -199,6 +200,7 @@
   margin-top: 25px;
   margin-right: 25px;
   margin-bottom: 25px;
+  gap: 5px;
 }
 
 .button {
@@ -246,7 +248,8 @@
 .card__icon-button {
   border: solid 2px transparent;
   outline: none;
-  transition: outline 0.3s linear;
+  transition: border 0.3s linear;
+  padding: 0;
 }
 
 .card__icon-button:focus-visible,
@@ -271,8 +274,12 @@
 }
 
 .modal__button {
-  padding: 12px 132px;
+  display: flex;
+  justify-content: center;
+  padding: 11px 132.5px;
   text-transform: uppercase;
+  max-width: 100%;
+  line-height: .9;
 }
 
 @media (width <= 375px) {
@@ -282,6 +289,7 @@
 
   .card__label {
     text-transform: lowercase;
+    right: 13px;
   }
 
   .save {
