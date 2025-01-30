@@ -196,11 +196,11 @@
 /* кнопки */
 .card__buttons {
   display: flex;
+  gap: 5px;
   align-self: end;
   margin-top: 25px;
   margin-right: 25px;
   margin-bottom: 25px;
-  gap: 5px;
 }
 
 .button {
@@ -242,27 +242,25 @@
 }
 
 .card__like-button {
-  width: 127px;
+  width: 130px;
 }
 
 .card__icon-button {
+  display: flex;
   border: solid 2px transparent;
-  outline: none;
-  transition: border 0.3s linear;
   padding: 0;
+  background-color: transparent;
+  transition: border 0.3s linear;
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible,
 .card__icon-button:focus {
-  box-shadow: none;
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
   border: solid 2px #000;
-}
-
-.card__icon-button::before {
-  background-color: transparent;
 }
 
 .save {
@@ -276,10 +274,10 @@
 .modal__button {
   display: flex;
   justify-content: center;
-  padding: 11px 132.5px;
-  text-transform: uppercase;
   max-width: 100%;
-  line-height: .9;
+  padding: 11px 132.5px;
+  line-height: 0.9;
+  text-transform: uppercase;
 }
 
 @media (width <= 375px) {
@@ -288,8 +286,8 @@
   }
 
   .card__label {
-    text-transform: lowercase;
     right: 13px;
+    text-transform: lowercase;
   }
 
   .save {
